@@ -31,6 +31,8 @@ const StringCalculator = () => {
 
             findSum(sumWithNumbers);
         } else {
+            setShowResult(false);
+            showErrorMessage("Invalid Input");
             findSum({ sum: 0, shouldStop: false });
         }
     }
@@ -38,6 +40,7 @@ const StringCalculator = () => {
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
         setShowResult(false);
+        showErrorMessage("");
     }
 
     return (
